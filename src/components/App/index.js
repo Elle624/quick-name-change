@@ -14,9 +14,9 @@ const App = () => {
     <section>
       <Header />
       <UserContextConsumer>
-        {() => (
+        {({ userName, changeUserName }) => (
           <main>
-            <p className='main'> 🗣 No new notifications, username! 🎉</p>
+            <p className='main'> 🗣 No new notifications, {userName}! 🎉</p>
             <input
               type='text'
               name='newUsername'
@@ -24,7 +24,9 @@ const App = () => {
               value={newUserName}
               onChange={updateUserName}
             />
-            <button>Change Username</button>
+            <button onClick={() => changeUserName(newUserName)}>
+              Change Username
+            </button>
           </main>
         )}
       </UserContextConsumer>

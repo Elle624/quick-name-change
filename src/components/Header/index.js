@@ -4,9 +4,9 @@ import { UserContextConsumer } from '../../userContext';
 const Header = () => {
   return (
     <UserContextConsumer>
-      {() => (
+      {({ userName }) => (
         <header>
-          <p>Welcome, username!</p>
+          <p>Welcome, {userName}!</p>
         </header>
       )}
     </UserContextConsumer>
