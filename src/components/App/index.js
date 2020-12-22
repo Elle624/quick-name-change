@@ -1,10 +1,12 @@
 import './App.css';
 import React, { useState } from 'react';
-import { UserContextConsumer } from './userContext';
+import { UserContextConsumer } from '../../userContext';
+import Header from '../Header';
 
 const App = () => {
   return (
     <section>
+      <Header />
       <UserContextConsumer>
         {() => (
           <main>
