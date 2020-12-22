@@ -3,8 +3,12 @@ const { Provider, Consumer } = React.createContext();
 
 const UserContextProvider = (props) => {
   const [userName, setUserName] = useState('Elle');
-
-  return <Provider value={userName}>{props.children}</Provider>;
+  const changeUserName = (newName) => {
+    setUserName(newName);
+  };
+  return (
+    <Provider value={{ userName, changeUserName }}>{props.children}</Provider>
+  );
 };
 
 export { UserContextProvider, Consumer as UserContextConsumer };
