@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-const { Provider, Consumer } = React.createContext();
+const UserContext = React.createContext();
 
 const UserContextProvider = (props) => {
   const [userName, setUserName] = useState('Elle');
@@ -7,8 +7,10 @@ const UserContextProvider = (props) => {
     setUserName(newName);
   };
   return (
-    <Provider value={{ userName, changeUserName }}>{props.children}</Provider>
+    <UserContext.Provider value={{ userName, changeUserName }}>
+      {props.children}
+    </UserContext.Provider>
   );
 };
 
-export { UserContextProvider, Consumer as UserContextConsumer };
+export { UserContextProvider, UserContext };
