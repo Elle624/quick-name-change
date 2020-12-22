@@ -24,7 +24,12 @@ const App = () => {
               value={newUserName}
               onChange={updateUserName}
             />
-            <button onClick={() => changeUserName(newUserName)}>
+            <button
+              onClick={() => {
+                changeUserName(newUserName);
+                setUserName('');
+              }}
+            >
               Change Username
             </button>
           </main>
