@@ -7,7 +7,7 @@
 This application is built to quickly reflect user's name change upon user's inputting.
 [Navigate to the deployed site on Vercel.](https://quick-name-change.vercel.app/)
 
-This simple application is built in few hours to practice React Context and React Hooks including useState, useEffect, and useRef. Component is also tested with React testing library and jest.
+This simple application is built in couple of hours to practice React Context and React Hooks including useContext, useState, useEffect, and useRef. Component is also tested with React testing library and jest.
 
 ### Demo
 
