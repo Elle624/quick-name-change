@@ -4,6 +4,12 @@ import { UserContextConsumer } from '../../userContext';
 import Header from '../Header';
 
 const App = () => {
+  const [newUserName, setUserName] = useState('');
+
+  const updateUserName = (event) => {
+    setUserName(event.target.value);
+  };
+
   return (
     <section>
       <Header />
@@ -11,7 +17,13 @@ const App = () => {
         {() => (
           <main>
             <p className='main'> 🗣 No new notifications, username! 🎉</p>
-            <input type='text' name='newUsername' placeholder='New username' />
+            <input
+              type='text'
+              name='newUsername'
+              placeholder='New username'
+              value={newUserName}
+              onChange={updateUserName}
+            />
             <button>Change Username</button>
           </main>
         )}
