@@ -12,4 +12,5 @@ This simple application is built in few hours to practice React Context and Reac
 ### Demo
 
 Application Demonstration
+
 ![Demo](https://user-images.githubusercontent.com/68085997/102836460-b1bd1580-43b6-11eb-993b-ef03b6d7f3bd.gif)
