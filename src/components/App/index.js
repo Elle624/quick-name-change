@@ -12,6 +12,13 @@ const App = () => {
     setUserName(event.target.value);
   };
 
+  const handleSubmit = () => {
+    changeUserName(newUserName);
+    setUserName('');
+    inputRef.current.disabled = false;
+    inputRef.current.focus();
+  };
+
   return (
     <section>
       <Header />
@@ -25,16 +32,7 @@ const App = () => {
           value={newUserName}
           onChange={updateUserName}
         />
-        <button
-          onClick={() => {
-            changeUserName(newUserName);
-            setUserName('');
-            inputRef.current.disabled = false;
-            inputRef.current.focus();
-          }}
-        >
-          Change Username
-        </button>
+        <button onClick={handleSubmit}>Change Username</button>
       </main>
     </section>
   );
