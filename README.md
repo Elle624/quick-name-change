@@ -1,4 +1,4 @@
-## Quick Name Change Solo project)
+## Quick Name Change (Solo project)
 
 [Deploy site](https://quick-name-change.vercel.app/)
 
